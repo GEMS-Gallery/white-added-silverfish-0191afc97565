@@ -24,8 +24,8 @@ const AddPropertyPage: React.FC = () => {
       const id = await backend.createProperty(
         data.propertyType,
         data.location,
-        data.size,
-        data.price,
+        parseFloat(data.size.toString()),
+        parseFloat(data.price.toString()),
         data.description ? [data.description] : [],
         data.imageUrl ? [data.imageUrl] : []
       );
